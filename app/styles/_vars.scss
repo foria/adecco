@@ -1,4 +1,13 @@
 
+$font-family-sans-serif: "NeutraBook", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-serif: "Lust", "Times New Roman", serif;
+$font-size-base: 1.250rem;
+
+$h1-font-size: $font-size-base * 1.8;
+$h2-font-size: $font-size-base * 1.6;
+
+$small-font-size: 85%;
+
 //Main colors
 $primary: #54c3bd;
 
@@ -6,3 +15,21 @@ $gray-100: #f3f3f3;
 $gray-200: #e9e9e9;
 
 $body-color: #000;
+
+$border-radius: 0;
+
+$input-color: #000;
+$input-btn-border-width: 2px;
+$input-border-color: #fff;
+$input-focus-border-color: $primary;
+$input-box-shadow: none;
+$input-focus-box-shadow: none;
+
+$text-muted: $primary;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 964px,
+  xl: 1140px
+) !default;

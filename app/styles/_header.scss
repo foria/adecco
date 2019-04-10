@@ -1,0 +1,97 @@
+
+header {
+    background-color: $gray-200;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.logo {
+    img {
+      width: 48px;
+      height: 50px;
+      object-fit: contain;
+    }
+}
+
+.client-meta {
+    font-size: 0.650em;
+    line-height: 1.2;
+    margin-bottom: 0;
+
+    > div {
+        margin: 0 25px;
+    }
+
+    dt, dd {
+        text-transform: uppercase;
+    }
+
+    dd {
+        margin-bottom: 0;
+    }
+}
+
+.user-avatar {
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 0;
+    margin-left: 30px;
+    box-sizing: content-box;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    text-indent: -9999px;
+    transition: 0.3s;
+    z-index: 1;
+
+    span {
+        background: $primary;
+        display: block;
+        height: 3px;
+        width: 32px;
+        position: absolute;
+        margin: auto;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        transition: all 0.3s;
+
+        &:before,
+        &:after {
+            background: #5ac1bd;
+            display: block;
+            height: 3px;
+            width: 100%;
+            content: "";
+            position: absolute;
+            left: 0;
+            transition-duration: 0.3s, 0.3s;
+            transition-delay: 0.3s, 0s;
+        }
+
+        &:before {
+            width: 40px;
+            top: -10px;
+            transition-property: top, transform;
+        }
+
+        &:after {
+            width: 24px;
+            bottom: -10px;
+            transition-property: bottom, transform;
+        }
+    }
+}

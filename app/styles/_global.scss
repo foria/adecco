@@ -1,0 +1,143 @@
+
+body {
+    padding: 30px;
+}
+
+.title-w-sep {
+    display: inline-block;
+    margin: 0 auto 13px;
+    padding: 0 16px 12px;
+    line-height: 1;
+    border-bottom: 2px solid $primary;
+}
+
+main.container {
+    padding: 0;
+}
+
+
+// PAGE TITLE
+.page-title {
+    height: 250px;
+    padding-top: 60px;
+    text-align: center;
+    background-color: $gray-100;
+
+    p {
+        max-width: 50%;
+        margin: 0 auto;
+    }
+}
+
+
+// PAGE BANNER
+.page-banner {
+    margin-bottom: 37px;
+}
+
+.banner-selezione {
+    position: relative;
+    margin-bottom: 0;
+
+    img {
+        width: 100%;
+    }
+
+    figcaption {
+        @extend h2;
+        color: white;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 50%;
+        transform: translatey(-50%);
+    }
+}
+
+.alt-nav {
+    ul {
+        display: table;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            display: table-cell;
+            vertical-align: middle;
+            width: 33.33%;
+            padding: 21px 66px 21px 30px;
+            font-size: 1.2em;
+            line-height: 1.24;
+            font-weight: bold;
+            color: white;
+            background-color: $primary;
+            position: relative;
+
+            &:first-child {
+                opacity: 0.8;
+                background-color: #90d8d5;
+            }
+
+            &:nth-child(2) {
+                opacity: 0.8;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                display: block;
+                top: 50%;
+                right: 15px;
+                transform: translatey(-50%);
+                width: 24px;
+                height: 24px;
+                background: url(../img/arrow.svg) center no-repeat;
+                background-size: contain;
+            }
+        }
+    }
+}
+
+
+// PAGE CONTENT
+.page-content {
+    background-color: $gray-100;
+    text-align: center;
+
+    hgroup {
+        margin: 100px 0;
+    }
+}
+
+.steps-nav {
+    background-color: $gray-200;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin: 0 17px;
+        }
+
+        a {
+            display: block;
+            line-height: 48px;
+            font-size: 0.650em;
+            border: 1px solid transparent;
+            padding: 0 5px;
+            color: $body-color;
+            cursor: pointer;
+
+            &.active {
+                border-bottom-color: $primary;
+            }
+        }
+    }
+}
+
+.form-wrapper {
+    width: 700px;
+    margin: 0 auto;
+}

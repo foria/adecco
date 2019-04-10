@@ -1,0 +1,48 @@
+
+label {
+  font-size: 0.850em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.form-group {
+  text-align: left;
+  margin: 60px 0;
+}
+
+.form-radio-group {
+  display: flex;
+
+  .form-check {
+    margin-right: 13px;
+    background-color: white;
+    display: table;
+
+    &:nth-child(5n+5) {
+      margin-right: 0;
+    }
+
+    label {
+      display: table-cell;
+      width: 130px;
+      height: 130px;
+      opacity: 0.8;
+      vertical-align: middle;
+      text-align: center;
+      font-size: 1.250rem;
+      cursor: pointer;
+      text-transform: none;
+    }
+
+    input {
+      visibility: hidden;
+      position: absolute;
+
+      &:checked + label {
+        opacity: 1;
+        background-color: $primary;
+        color: white;
+      }
+    }
+  }
+}
