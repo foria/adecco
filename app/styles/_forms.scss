@@ -32,6 +32,7 @@ label {
       font-size: 1.250rem;
       cursor: pointer;
       text-transform: none;
+      font-weight: normal;
     }
 
     input {
@@ -42,6 +43,7 @@ label {
         opacity: 1;
         background-color: $primary;
         color: white;
+        font-weight: bold;
       }
     }
   }
