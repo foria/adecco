@@ -194,7 +194,8 @@ main.container {
 }
 
 .form-wrapper {
-    width: 700px;
+    min-width: 700px;
+    width: 50%;
     margin: 0 auto;
 }
 
