@@ -3,11 +3,49 @@ label {
   font-size: 0.850em;
   font-weight: bold;
   text-transform: uppercase;
+  opacity: 0.5;
 }
 
 .form-group {
   text-align: left;
   margin: 60px 0;
+
+  small {
+    display: none;
+  }
+
+  &.onfocus {
+    > label {
+      color: $primary;
+      opacity: 1;
+    }
+
+    small {
+      display: block;
+    }
+  }
+
+  &.filled {
+    > label {
+      color: black;
+      opacity: 1;
+    }
+  }
+}
+
+.form-control {
+  border: 2px solid transparent;
+  height: 48px;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: $font-size-base;
+  font-weight: bold;
+
+  &:focus {
+    border-color: $primary;
+    outline: 0;
+    box-shadow: none;
+  }
 }
 
 .form-radio-group {
@@ -29,7 +67,7 @@ label {
       opacity: 0.8;
       vertical-align: middle;
       text-align: center;
-      font-size: 1.250rem;
+      font-size: $font-size-base;
       cursor: pointer;
       text-transform: none;
       font-weight: normal;
@@ -44,6 +82,10 @@ label {
         background-color: $primary;
         color: white;
         font-weight: bold;
+      }
+
+      &:focus {
+        // color: red;
       }
     }
   }

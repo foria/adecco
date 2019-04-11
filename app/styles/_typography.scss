@@ -1,4 +1,10 @@
 
+body {
+    font-size: $font-size-base;
+    font-family: $font-family-sans-serif;
+    color: $body-color;
+}
+
 p {
   font-family: $font-family-serif;
 }
@@ -9,7 +15,17 @@ h2 {
 }
 
 h6 {
+  font-family: $font-family-serif;
   text-transform: uppercase;
+  font-size: $font-size-base;
+}
+
+.text-muted {
+    color: $primary;
+}
+
+.badge {
+    font-size: 15px;
 }
 
 .the-arrow {

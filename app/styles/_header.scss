@@ -1,8 +1,14 @@
 
 header {
     background-color: $gray-200;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    width: calc(100% - 60px);
+    z-index: 9999;
 }
 
 .logo {
@@ -17,6 +23,8 @@ header {
     font-size: 0.650em;
     line-height: 1.2;
     margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
 
     > div {
         margin: 0 25px;
@@ -34,6 +42,10 @@ header {
         margin-bottom: 0;
         font-weight: bold;
     }
+}
+
+.user-status {
+  margin-left: auto;
 }
 
 .user-avatar {

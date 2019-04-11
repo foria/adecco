@@ -10,13 +10,15 @@
     margin-right: 15px;
     color: white;
     background-color: $primary;
-    padding-left: 21px;
+    padding: 0 9px 0 21px;
+    line-height: 32px;
+    border-radius: 10rem;
 
     [data-role="remove"] {
         margin: -3px 5px 0 17px;
         cursor: pointer;
         font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-        font-size: 1.2rem;
+        font-size: 20px;
         margin-top: -3px;
         display: inline-block;
         line-height: 32px;

@@ -1,8 +1,28 @@
 
 body {
-    padding: 30px;
-    //padding-bottom: 500px // for dev use
+    padding: 100px 30px 30px;
+    //padding-bottom: 500px; // for dev use
 }
+
+hr.border {
+    position: fixed;
+    width: 100%;
+    height: 30px;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    border: none;
+    z-index: 1;
+
+    &.top {
+        top: 0;
+    }
+
+    &.bottom {
+        bottom: 0;
+    }
+}
+
 
 .title-w-sep {
     display: inline-block;
@@ -12,6 +32,10 @@ body {
     border-bottom: 2px solid $primary;
 }
 
+.container {
+    width: 100%;
+}
+
 main.container {
     padding: 0;
 }
@@ -19,10 +43,18 @@ main.container {
 
 // PAGE TITLE
 .page-title {
-    height: 250px;
-    padding-top: 60px;
+    height: calc(45vh - 100px);
+    min-height: 250px;
     text-align: center;
     background-color: $gray-100;
+    position: relative;
+
+    hgroup {
+        position: absolute;
+        top: 50%;
+        transform: translatey(-50%);
+        width: 100%;
+    }
 
     p {
         max-width: 50%;
@@ -39,13 +71,17 @@ main.container {
 .banner-selezione {
     position: relative;
     margin-bottom: 0;
+    height: calc(54.5vh - 130px);
+    min-height: 275px;
 
     img {
         width: 100%;
+        object-fit: cover;
     }
 
     figcaption {
         @extend h2;
+        font-size: 32px;
         color: white;
         position: absolute;
         width: 100%;
@@ -58,9 +94,11 @@ main.container {
 .alt-nav {
     ul {
         display: table;
+        width: 100%;
         margin: 0;
         padding: 0;
         list-style: none;
+        //border-bottom: 1px solid red;
 
         li {
             display: table-cell;
@@ -124,6 +162,8 @@ main.container {
         list-style: none;
         margin: 0;
         padding: 0;
+        display: flex;
+        justify-content: center;
 
         li {
             margin: 0 17px;
