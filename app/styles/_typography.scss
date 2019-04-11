@@ -1,9 +1,77 @@
 
+p {
+  font-family: $font-family-serif;
+}
+
 h1,
 h2 {
-  font-family: $font-family-serif;
+  font-family: $font-family-serif-2;
 }
 
 h6 {
   text-transform: uppercase;
+}
+
+.the-arrow {
+  display: inline-block;
+  vertical-align: middle;
+
+  &.-left {
+    margin-right: 30px;
+
+    > .shaft {
+
+      &:before, &:after {
+        left: -11px;
+      }
+      &:before {
+        transform: rotate(140deg);
+      }
+      &:after {
+        transform: rotate(-140deg);
+      }
+    }
+  }
+
+  &.-right {
+    margin-left: 30px;
+
+    > .shaft {
+
+      &:before, &:after {
+        right: 0;
+      }
+
+      &:before {
+        transform: rotate(40deg);
+      }
+      &:after {
+        transform: rotate(-40deg);
+      }
+    }
+  }
+
+  > .shaft {
+    width: 64px;
+    background-color: $primary;
+    display: block;
+    height: 1px;
+    position: relative;
+
+    &:before, &:after {
+      background-color: $primary;
+      content: '';
+      display: block;
+      width: 12px;
+      height: 1px;
+      position: absolute;
+      top: 0;
+    }
+    &:before {
+      transform-origin: top right;
+    }
+    &:after {
+      transform-origin: bottom right;
+    }
+  }
 }

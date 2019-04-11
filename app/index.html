@@ -7,9 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>ADECCO</title>
     <!-- Place favicon.ico in the root directory -->
-    <!-- build:css styles/vendor.css -->
-    <!-- <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css" /> -->
-    <!-- endbuild -->
+
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -53,9 +51,9 @@
 
         <nav class="alt-nav">
           <ul>
-            <li>Somministrazione a tempo determintato</li>
-            <li>Permanent Placement</li>
-            <li>Staff Leasing</li>
+            <li><a href="">Somministrazione a tempo determintato</a></li>
+            <li><a href="">Permanent Placement</a></li>
+            <li><a href="">Staff Leasing</a></li>
           </ul>
         </nav>
       </section>
@@ -129,7 +127,7 @@
                 <span class="badge badge-pill">Sketch<span data-role="remove"></span></span>
                 <span class="badge badge-pill">Adobe InDesign<span data-role="remove"></span></span>
                 <span class="badge badge-pill">InVision<span data-role="remove"></span></span>
-              </ul>
+              </div>
             </div>
 
             <div class="form-group">
@@ -211,11 +209,23 @@
               <small class="form-text text-muted">Seleziona lo scopo tra le opzioni</small>
             </div>
 
-            <div class="chart-area">
-              <h6 class="title-w-sep">GRAFICO COMPLESSITÀ</h6>
-              <p>Periodo, numero di collaboratori richiesti, orario e descrizione dell’attività</p>
-            </div>
+          </div>
 
+          <div class="chart-area">
+            <h6 class="title-w-sep">GRAFICO COMPLESSITÀ</h6>
+            <p>Alta complessità</p>
+            <figure>
+              <img src="img/chart-base.svg">
+              <figcaption>
+                <ul class="chart-labels">
+                  <li>Numerosità profili <strong>2 - 4 lavoratori</strong></li>
+                  <li>Livello di esperienza <strong>Da 1 a 2 anni</strong></li>
+                  <li>Durata missione <strong>Fino a 15 giorni</strong></li>
+                  <li>Temp. inserimento <strong>Entro 1 settimana</strong></li>
+                  <li>Disponibilità <strong>Assenti e di difficile reperibilità</strong></li>
+                </ul>
+              </figcaption>
+            </figure>
           </div>
 
         </form>
@@ -223,8 +233,24 @@
 
       <nav class="bottom-nav">
         <ul>
-          <li><span>Annulla</span> Torna alla selezione del Cliente</li>
-          <li><span>Avanti</span> Vai a La Soluzione</li>
+          <li>
+            <div class="icon-text">
+              <span class="the-arrow -left">
+                <span class="shaft"></span>
+              </span>
+              <strong>Annulla</strong>
+            </div>
+            <span class="link-title">Torna alla selezione del Cliente</span>
+          </li>
+          <li>
+            <div class="icon-text">
+              <strong>Avanti</strong>
+              <span class="the-arrow -right">
+                <span class="shaft"></span>
+              </span>
+            </div>
+            <span class="link-title">Vai a La Soluzione</span>
+          </li>
         </ul>
       </nav>
 
@@ -232,7 +258,6 @@
     <!-- build:js scripts/vendor.js -->
     <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="scripts/tagsinput.js"></script>
     <!-- endbuild -->
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>

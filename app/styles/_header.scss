@@ -26,8 +26,13 @@ header {
         text-transform: uppercase;
     }
 
+    dt {
+        font-weight: normal;
+    }
+
     dd {
         margin-bottom: 0;
+        font-weight: bold;
     }
 }
 
@@ -43,8 +48,8 @@ header {
     position: relative;
     top: 0;
     right: 0;
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 20px;
     background: transparent;
     border: 0;
     margin-left: 30px;
@@ -55,12 +60,13 @@ header {
     text-indent: -9999px;
     transition: 0.3s;
     z-index: 1;
+    padding: 0;
 
     span {
         background: $primary;
         display: block;
-        height: 3px;
-        width: 32px;
+        height: 2px;
+        width: 28px;
         position: absolute;
         margin: auto;
         top: 50%;
@@ -73,7 +79,7 @@ header {
         &:after {
             background: #5ac1bd;
             display: block;
-            height: 3px;
+            height: 2px;
             width: 100%;
             content: "";
             position: absolute;
@@ -83,14 +89,14 @@ header {
         }
 
         &:before {
-            width: 40px;
-            top: -10px;
+            width: 36px;
+            top: -9px;
             transition-property: top, transform;
         }
 
         &:after {
-            width: 24px;
-            bottom: -10px;
+            width: 16px;
+            bottom: -9px;
             transition-property: bottom, transform;
         }
     }

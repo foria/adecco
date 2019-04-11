@@ -1,9 +1,8 @@
-console.log('\'Allo \'Allo!');
 
-// Uncomment to enable Bootstrap tooltips
-// https://getbootstrap.com/docs/4.0/components/tooltips/#example-enable-tooltips-everywhere
-// $(function () { $('[data-toggle="tooltip"]').tooltip(); });
+$(document).ready(function(){
 
-// Uncomment to enable Bootstrap popovers
-// https://getbootstrap.com/docs/4.0/components/popovers/#example-enable-popovers-everywhere
-// $(function () { $('[data-toggle="popover"]').popover(); });
+    $('span[data-role=remove]').on('click', function(){
+        $(this).parent().remove();
+    } )
+
+})

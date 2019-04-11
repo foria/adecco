@@ -1,6 +1,7 @@
 
 body {
     padding: 30px;
+    //padding-bottom: 500px // for dev use
 }
 
 .title-w-sep {
@@ -94,6 +95,13 @@ main.container {
                 background: url(../img/arrow.svg) center no-repeat;
                 background-size: contain;
             }
+
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                color: white;
+            }
         }
     }
 }
@@ -130,8 +138,10 @@ main.container {
             color: $body-color;
             cursor: pointer;
 
-            &.active {
+            &.active,
+            &:hover {
                 border-bottom-color: $primary;
+                text-decoration: none;
             }
         }
     }
@@ -140,4 +150,68 @@ main.container {
 .form-wrapper {
     width: 700px;
     margin: 0 auto;
+}
+
+.chart-area {
+    background-color: $gray-200;
+    padding: 45px 0 60px;
+
+    img {
+        width: 100%;
+    }
+}
+
+.chart-labels {
+    list-style: none;
+    padding: 16px 44px 0;
+    display: flex;
+    flex-direction: row;
+
+    li {
+        width: 20%;
+        padding: 0 1%;
+        font-size: 0.850em;
+
+        strong {
+            display: block;
+            font-size: 0.882em;
+            line-height: 1.2;
+            font-family: $font-family-sans-serif;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.bottom-nav {
+
+    ul {
+        display: table;
+        width: 100%;
+        margin-top: 30px;
+        list-style: none;
+        padding: 0;
+
+        li {
+            width: 50%;
+            display: table-cell;
+            padding: 50px 30px;
+            background-color: $gray-100;
+
+            &:hover {
+                background-color: $gray-200;
+            }
+
+            &:last-child {
+                text-align: right;
+            }
+        }
+
+        .icon-text {
+            margin-bottom: 13px;
+        }
+
+        .link-title {
+            font-family: $font-family-serif;
+        }
+    }
 }
