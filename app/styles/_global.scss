@@ -44,10 +44,13 @@ main.container {
 // PAGE TITLE
 .page-title {
     height: calc(45vh - 100px);
-    min-height: 250px;
     text-align: center;
     background-color: $gray-100;
     position: relative;
+
+    @media (min-height: 768px) {
+        min-height: 250px;
+    }
 
     hgroup {
         position: absolute;
@@ -72,7 +75,10 @@ main.container {
     position: relative;
     margin-bottom: 0;
     height: calc(54.5vh - 130px);
-    min-height: 275px;
+
+    @media (min-height: 768px) {
+        min-height: 275px;
+    }
 
     img {
         width: 100%;
