@@ -127,6 +127,19 @@ main.container {
                 opacity: 0.8;
             }
 
+            &.limit-msg {
+                background-color: #ff0033;
+
+                > * {
+                    width: 100%;
+                    height: 100%;
+
+                    strong {
+                        display: block;
+                    }
+                }
+            }
+
             &:after {
                 content: "";
                 position: absolute;
@@ -138,6 +151,17 @@ main.container {
                 height: 24px;
                 background: url(../img/arrow.svg) center no-repeat;
                 background-size: contain;
+                z-index: 10;
+            }
+
+            &.icon-duplicate:after {
+              background-image: url(../img/duplicate.svg);
+            }
+            &.icon-add:after {
+              background-image: url(../img/add.svg);
+            }
+            &.icon-payroll:after {
+              background-image: url(../img/payroll.svg);
             }
 
             a {
@@ -155,9 +179,10 @@ main.container {
 .page-content {
     background-color: $gray-100;
     text-align: center;
+    padding-bottom: 60px;
 
     hgroup {
-        margin: 100px 0;
+        padding: 100px 0;
     }
 }
 
@@ -173,22 +198,26 @@ main.container {
 
         li {
             margin: 0 17px;
-        }
-
-        a {
             display: block;
             line-height: 48px;
             font-size: 0.650em;
             border: 1px solid transparent;
             padding: 0 5px;
-            color: $body-color;
-            cursor: pointer;
+            opacity: 0.4;
 
-            &.active,
-            &:hover {
+            &.step-active {
+                opacity: 1;
                 border-bottom-color: $primary;
                 text-decoration: none;
             }
+
+            &.step-done {
+                opacity: 1;
+            }
+        }
+
+        a {
+            color: $body-color;
         }
     }
 }
@@ -202,6 +231,7 @@ main.container {
 .chart-area {
     background-color: $gray-200;
     padding: 45px 0 60px;
+    margin-bottom: -60px;
 
     img {
         width: 100%;
@@ -251,6 +281,17 @@ main.container {
             &:last-child {
                 text-align: right;
             }
+
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                color: $body-color;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
         }
 
         .icon-text {
@@ -261,4 +302,44 @@ main.container {
             font-family: $font-family-serif;
         }
     }
+}
+
+.table-quotes {
+    width: 100%;
+    text-align: left;
+
+    th, td {
+        padding: 15px;
+    }
+
+    th {
+        font-size: 0.750em;
+        border-bottom: 2px solid $primary;
+        text-transform: uppercase;
+    }
+
+    td {
+        font-size: 0.850em;
+        height: 80px;
+
+        &:last-child {
+            width: 3%;
+        }
+    }
+
+    .btn {
+        visibility: hidden;
+    }
+
+    tbody tr {
+        &:focus,
+        &:hover {
+            background-color: rgba($primary, 0.25);
+
+            .btn {
+                visibility: visible;
+            }
+        }
+    }
+
 }

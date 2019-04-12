@@ -10,7 +10,9 @@
 
     <link rel="stylesheet" href="styles/bootstrap.min.css">
 
+    <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
   </head>
   <body>
     <header>
@@ -63,11 +65,11 @@
       <section class="page-content">
         <form class="form-selezione">
           <nav class="steps-nav">
-            <ul class="d-flex justify-content-center">
-              <li><a href="">A. Tipo di contratto</a></li>
-              <li><a class="active" href="">B. Profilo richiesto</a></li>
-              <li><a href="">C. La Missione</a></li>
-              <li><a href="">D. Analisi complessità richiesta</a></li>
+            <ul>
+              <li class="step-done"><a href="#">A. Tipo di contratto</a></li>
+              <li class="step-active">B. Profilo richiesto</li>
+              <li>C. La Missione</li>
+              <li>D. Analisi complessità richiesta</li>
             </ul>
           </nav>
 
@@ -236,22 +238,26 @@
       <nav class="bottom-nav">
         <ul>
           <li>
-            <div class="icon-text">
-              <span class="the-arrow -left">
-                <span class="shaft"></span>
-              </span>
-              <strong>Annulla</strong>
-            </div>
-            <span class="link-title">Torna alla selezione del Cliente</span>
+            <a href="#">
+              <div class="icon-text">
+                <span class="the-arrow -left">
+                  <span class="shaft"></span>
+                </span>
+                <strong>Annulla</strong>
+              </div>
+              <span class="link-title">Torna alla selezione del Cliente</span>
+            </a>
           </li>
           <li>
-            <div class="icon-text">
-              <strong>Avanti</strong>
-              <span class="the-arrow -right">
-                <span class="shaft"></span>
-              </span>
-            </div>
-            <span class="link-title">Vai a La Soluzione</span>
+            <a href="#">
+              <div class="icon-text">
+                <strong>Avanti</strong>
+                <span class="the-arrow -right">
+                  <span class="shaft"></span>
+                </span>
+              </div>
+              <span class="link-title">Vai a La Soluzione</span>
+            </a>
           </li>
         </ul>
       </nav>
@@ -260,7 +266,12 @@
 
     <hr class="border top">
     <hr class="border bottom">
-    <script src="scripts/vendor.js"></script>
+    <!-- build:js scripts/vendor.js -->
+    <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+    <!-- endbuild -->
+    <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
+    <!-- endbuild -->
   </body>
 </html>

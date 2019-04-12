@@ -31,6 +31,23 @@ label {
       opacity: 1;
     }
   }
+
+  &.is-invalid {
+    label,
+    small {
+      color: #ff0033;
+    }
+    label {
+      opacity: 1;
+    }
+    input,
+    textarea {
+      border-color: #ff0033;
+    }
+    small {
+      display: block;
+    }
+  }
 }
 
 .form-control {
