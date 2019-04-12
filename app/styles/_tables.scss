@@ -1,0 +1,161 @@
+
+
+table {
+    width: 100%;
+    text-align: left;
+    margin: 60px 0;
+
+    th, td {
+        padding: 15px;
+    }
+
+    th {
+        font-size: 12px;
+        border-bottom: 2px solid $primary;
+        text-transform: uppercase;
+    }
+
+    td {
+        font-size: 0.850em;
+        height: 80px;
+    }
+
+    tbody {
+        tr {
+            &:focus,
+            &:hover {
+                background-color: rgba($primary, 0.25);
+            }
+        }
+        td {
+            border-bottom: 1px solid #dddddd;
+        }
+    }
+
+    tfoot {
+        td {
+            font-weight: bold;
+
+            &:first-child:last-child {
+                text-align: center;
+                padding-top: 50px;
+                font-weight: normal;
+            }
+        }
+    }
+}
+
+
+.table-quoteslist {
+
+    th {
+        font-size: 17px;
+    }
+
+    td {
+        &:last-child {
+            width: 3%;
+        }
+    }
+
+    .btn {
+        visibility: hidden;
+    }
+
+    tbody tr {
+        &:focus,
+        &:hover {
+            .btn {
+                visibility: visible;
+            }
+        }
+    }
+}
+
+.table-tariffeorarie {
+    th {
+        text-align: right;
+    }
+    td {
+        //width: 9%;
+        font-size: 13px;
+        position: relative;
+        text-align: right;
+
+        &:first-child {
+            width: 19%;
+            text-align: left;
+            text-transform: uppercase;
+        }
+
+        &:last-child {
+            width: 11%;
+
+            a:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
+    }
+
+    .on-editing {
+        background-color: rgba($primary, 0.25);
+
+        td {
+            border-top: 2px solid $primary;
+
+            &:first-child {
+                border-left: 2px solid $primary;
+            }
+
+            &:last-child {
+                border-right: 2px solid $primary;
+            }
+        }
+
+        & + tr {
+             background-color: rgba($primary, 0.25);
+
+            td {
+                border-bottom: 2px solid $primary;
+
+                &:first-child {
+                    border-left: 2px solid $primary;
+                }
+
+                &:last-child {
+                    border-right: 2px solid $primary;
+                }
+            }
+        }
+    }
+
+    .highlighted {
+        background-color: rgba(#ff5000, 0.2);
+    }
+
+    .form-control,
+    .select-input {
+        height: 42px;
+        font-size: 13px;
+    }
+
+    .form-control:not(.select-input),
+    .select-group {
+        position: absolute;
+        top: 50%;
+        transform: translatey(-50%);
+        width: calc(100% - 15px);
+        //width: 100%;
+    }
+
+    input {
+        text-align: right;
+        padding: 6px 10px;
+    }
+
+    .select-input {
+        .caret {
+            border-width: 4px;
+        }
+    }
+}

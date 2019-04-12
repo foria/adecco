@@ -10,8 +10,13 @@ p {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: $font-family-serif-2;
+}
+
+h3 {
+  font-size: 1.400em;
 }
 
 h6 {
@@ -90,5 +95,51 @@ h6 {
       transform-origin: bottom right;
     }
   }
+}
+
+.caret {
+    border-width: 8px;
+}
+
+.icon {
+  display: inline-block;
+  cursor: pointer;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: center no-repeat;
+    background-size: contain;
+  }
+}
+
+.rowedit,
+.rowdelete,
+.rowsave,
+.rowrevert,
+.icon-repeat {
+  @extend .icon;
+}
+
+.rowedit:after {
+  background-image:  url(../img/edit.svg);
+}
+
+.rowdelete:after {
+  background-image:  url(../img/trash.svg);
+}
+
+.rowsave:after {
+  background-image:  url(../img/confirm.svg);
+}
+
+.rowrevert:after {
+  background-image:  url(../img/revert.svg);
+}
+
+.icon-repeat:after {
+  background-image:  url(../img/repeat.svg);
 }
 

@@ -30,6 +30,12 @@ hr.border {
     padding: 0 16px 12px;
     line-height: 1;
     border-bottom: 2px solid $primary;
+
+    form & + p {
+      min-width: 700px;
+      width: 50%;
+      margin: 0 auto;
+    }
 }
 
 .container {
@@ -99,7 +105,7 @@ main.container {
 
 .alt-nav {
     ul {
-        display: table;
+        display: flex;
         width: 100%;
         margin: 0;
         padding: 0;
@@ -107,16 +113,29 @@ main.container {
         //border-bottom: 1px solid red;
 
         li {
-            display: table-cell;
+            //display: table;
             vertical-align: middle;
             width: 33.33%;
-            padding: 21px 66px 21px 30px;
+            height: 100px;
+            padding: 0 53px 0 30px;
             font-size: 1.2em;
             line-height: 1.24;
             font-weight: bold;
             color: white;
             background-color: $primary;
             position: relative;
+
+            > * {
+                display: table;
+                width: 100%;
+                height: 100%;
+                color: white;
+
+                > span {
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+            }
 
             &:first-child {
                 opacity: 0.8;
@@ -131,26 +150,24 @@ main.container {
                 background-color: #ff0033;
 
                 > * {
-                    width: 100%;
-                    height: 100%;
+                    font-size: 20px;
 
                     strong {
                         display: block;
+                        font-size: 15px;
+                        margin-bottom: 7px;
                     }
                 }
             }
 
             &:after {
+                @extend .icon;
                 content: "";
                 position: absolute;
-                display: block;
                 top: 50%;
                 right: 15px;
                 transform: translatey(-50%);
-                width: 24px;
-                height: 24px;
-                background: url(../img/arrow.svg) center no-repeat;
-                background-size: contain;
+                background-image: url(../img/arrow.svg);
                 z-index: 10;
             }
 
@@ -162,13 +179,6 @@ main.container {
             }
             &.icon-payroll:after {
               background-image: url(../img/payroll.svg);
-            }
-
-            a {
-                display: block;
-                width: 100%;
-                height: 100%;
-                color: white;
             }
         }
     }
@@ -182,7 +192,11 @@ main.container {
     padding-bottom: 60px;
 
     hgroup {
-        padding: 100px 0;
+        padding: 40px 0;
+
+        &:first-of-type {
+            padding: 100px 0 40px;
+        }
     }
 }
 
@@ -222,16 +236,19 @@ main.container {
     }
 }
 
-.form-wrapper {
-    min-width: 700px;
-    width: 50%;
-    margin: 0 auto;
-}
-
 .chart-area {
     background-color: $gray-200;
     padding: 45px 0 60px;
-    margin-bottom: -60px;
+    margin: 60px 0 -60px 0;
+
+    figure {
+        margin: 50px 0;
+
+        figcaption {
+            font-size: 0.850em;
+            margin-bottom: 20px;
+        }
+    }
 
     img {
         width: 100%;
@@ -269,10 +286,28 @@ main.container {
         padding: 0;
 
         li {
-            width: 50%;
+            width: 33.33%;
             display: table-cell;
             padding: 50px 30px;
             background-color: $gray-100;
+
+            &:first-child:nth-last-child(2),
+            &:last-child:nth-child(2) {
+                width: 50%;
+            }
+
+            &:nth-child(2):nth-last-child(2) {
+                background-color: $primary;
+                text-align: center;
+
+                a {
+                    color: white;
+
+                    &:hover {
+                        opacity: 0.6;
+                    }
+                }
+            }
 
             &:hover {
                 background-color: $gray-200;
@@ -304,42 +339,19 @@ main.container {
     }
 }
 
-.table-quotes {
-    width: 100%;
+.titles-sbs {
     text-align: left;
 
-    th, td {
-        padding: 15px;
+    h3 {
+      margin-top: 0;
     }
 
-    th {
-        font-size: 0.750em;
-        border-bottom: 2px solid $primary;
-        text-transform: uppercase;
-    }
+    > *:last-child {
+        text-align: right;
 
-    td {
-        font-size: 0.850em;
-        height: 80px;
-
-        &:last-child {
-            width: 3%;
+        .form-control {
+            text-align: right;
         }
     }
-
-    .btn {
-        visibility: hidden;
-    }
-
-    tbody tr {
-        &:focus,
-        &:hover {
-            background-color: rgba($primary, 0.25);
-
-            .btn {
-                visibility: visible;
-            }
-        }
-    }
-
 }
+

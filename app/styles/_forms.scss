@@ -2,17 +2,37 @@
 label {
   font-size: 0.850em;
   font-weight: bold;
-  text-transform: uppercase;
+  //text-transform: uppercase; //presence of both lowerc and upper case text
   opacity: 0.5;
+
+  fieldset[disabled] & {
+    opacity: 1;
+  }
+
 }
 
-.form-group {
-  text-align: left;
-  margin: 60px 0;
+.form-control[disabled],
+fieldset[disabled] .form-control {
+    background-color: transparent;
+    font-size: 28px;
+    padding: 0;
+}
 
-  small {
-    display: none;
+.form-row {
+  min-width: 700px;
+  width: 50%;
+  text-align: left;
+  margin: 60px auto;
+
+  &.row {
+    min-width: 730px;
+    width: calc(50% + 30px);
   }
+
+  // Show help text only onfocus or for validation (not totally tested)
+  // small {
+  //   visibility: hidden;
+  // }
 
   &.onfocus {
     > label {
@@ -21,7 +41,7 @@ label {
     }
 
     small {
-      display: block;
+      visibility: visible;
     }
   }
 
@@ -29,23 +49,6 @@ label {
     > label {
       color: black;
       opacity: 1;
-    }
-  }
-
-  &.is-invalid {
-    label,
-    small {
-      color: #ff0033;
-    }
-    label {
-      opacity: 1;
-    }
-    input,
-    textarea {
-      border-color: #ff0033;
-    }
-    small {
-      display: block;
     }
   }
 }
@@ -57,12 +60,14 @@ label {
   box-shadow: none;
   font-size: $font-size-base;
   font-weight: bold;
+  color: $body-color;
 
   &:focus {
     border-color: $primary;
     outline: 0;
     box-shadow: none;
   }
+
 }
 
 .form-radio-group {
@@ -117,5 +122,70 @@ label {
         // color: red;
       }
     }
+  }
+}
+
+.select-group {
+  display: block;
+
+  &.open .dropdown-toggle {
+    box-shadow: none;
+  }
+
+  .dropdown-menu {
+    width: 100%;
+  }
+
+  select {
+    visibility: hidden;
+    position: absolute;
+  }
+}
+
+.btn-group > .select-input {
+  width: 100%;
+  text-align: left;
+  color: $body-color;
+  float: none;
+  padding-right: 30px;
+
+  .caret {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translatey(-50%);
+    border-top-color: $body-color;
+  }
+}
+
+.totals-row {
+    margin: 60px 0;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    label {
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+
+    .form-control {
+      font-size: 36px;
+    }
+}
+
+.is-invalid {
+  label,
+  small {
+    color: #ff0033 !important;
+  }
+  label {
+    opacity: 1 !important;
+  }
+  input,
+  textarea {
+    border-color: #ff0033 !important;
+  }
+  small {
+    visibility: visible !important;
   }
 }
