@@ -8,7 +8,7 @@
     <title>ADECCO</title>
     <!-- Place favicon.ico in the root directory -->
 
-    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/vendor.css">
 
     <link rel="stylesheet" href="styles/main.css">
   </head>
@@ -60,7 +60,7 @@
         </nav>
       </section>
 
-      <section class="page-content">
+      <section class="page-content clearfix">
         <form class="form-selezione">
           <nav class="steps-nav">
             <ul>
@@ -154,9 +154,15 @@
           <h6 class="title-w-sep">Dati Missione</h6>
           <p>Periodo, numero di collaboratori richiesti, orario e descrizione dell’attività</p>
 
-          <div class="form-row">
-            <label for="periodo">Periodo (Inizio e Fine)</label>
-            <input type="text" class="form-control" id="periodo" aria-describedby="periodo" placeholder="">
+          <div class="row form-row">
+            <div class="col-sm-6">
+              <label for="inizio">Data di Inizio</label>
+              <input type="text" class="form-control datepicker" id="inizio" aria-describedby="inizio" placeholder="">
+            </div>
+            <div class="col-sm-6">
+              <label for="fine">Data di Fine</label>
+              <input type="text" class="form-control datepicker" id="fine" aria-describedby="fine" placeholder="">
+            </div>
           </div>
 
           <div class="form-row is-invalid">

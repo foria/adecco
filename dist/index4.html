@@ -8,7 +8,8 @@
     <title>ADECCO</title>
     <!-- Place favicon.ico in the root directory -->
 
-    <link rel="stylesheet" href="styles/bootstrap.min.css">
+
+    <link rel="stylesheet" href="styles/vendor.css">
 
     <link rel="stylesheet" href="styles/main.css">
   </head>
@@ -41,7 +42,7 @@
       <section class="page-title">
         <hgroup>
           <h1 class="title-w-sep">3/3  | Documento d’offerta</h1>
-          <p>Inizia da esistenti o crea nuove quotazioni da inserire nel documento d’offerta</p>
+          <p>Seleziona gli elementi da includere nel documento d’offerta</p>
         </hgroup>
       </section>
 
@@ -52,7 +53,7 @@
         </figure>
       </section>
 
-      <section class="page-content">
+      <section class="page-content clearfix">
         <nav class="steps-nav">
           <ul>
             <li class="step-active">Frontespizio</li>
@@ -66,10 +67,648 @@
         </nav>
 
         <hgroup>
-          <h2 class="title-w-sep ">Frontespizio</h2>
-          <p>Sono già presenti 3 quotazioni per il cliente in archivio da cui partire</p>
+          <h2 class="title-w-sep ">Frontespizio e Incipit</h2>
+          <p>Puoi modificare i contenuti della proposta utilizzando l’editor e selezionando o escludendo gli elementi</p>
         </hgroup>
+
+        <div class="text-editor-wrapper">
+
+          <p>Sulla base dei parametri selezionati precedentemente, verrà visualizzata la descrizione dettagliata del bisogno che puoi far scendere in proposta e/o modificare a piacimento. Seleziona gli elementi da includere nel documento di proposta.</p>
+
+          <div class="text-editor">
+            <label>Frontespizio</label>
+            <textarea></textarea>
+          </div>
+
+          <div class="text-editor">
+            <label>Incipit</label>
+            <textarea></textarea>
+          </div>
+
+        </div>
+
+        <hgroup>
+          <h2 class="title-w-sep ">Descrizione del bisogno</h2>
+          <p>Seleziona quali paragrafi inserire per descrivere il need del Cliente</p>
+        </hgroup>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Esigenze</th>
+              <th>Descrizione da includere</th>
+              <th>Includi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Professione</td>
+              <td>Il profilo professionale richiesto è quello di UI/UX Designer</td>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="">
+                  <span></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>Scopo</td>
+              <td>Lo scopo è sostitutivo</td>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="">
+                  <span></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>Numero risorse</td>
+              <td>Il numero di risorse da inserire è 2-4 lavoratori</td>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="">
+                  <span></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>Durata del contratto</td>
+              <td>La durata del contratto ipotizzato è da 15 giorni a 1 mese</td>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="">
+                  <span></span>
+                </label>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <hgroup>
+          <h2 class="title-w-sep ">Servizi inclusi e additional</h2>
+          <p>Questi servizi verranno inclusi nell’offerta (non opzionabili per il Cliente) e quali il Cliente può scegliere come opzione (additional)</p>
+        </hgroup>
+
+        <h6 class="title-w-sep">FORMAZIONE E ESPERIENZE PROFESSIONALI RICHIESTE</h6>
+
+        <table class="table-options">
+          <thead>
+            <tr>
+              <th>Servizio</th>
+              <th>TARIFFA</th>
+              <th>Suggerito</th>
+              <th>Incluso</th>
+              <th>Additional</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><icon class="icon-info"></icon>STANDARD ADECCO SELEZIONE</td>
+              <td></td>
+              <td></td>
+              <td>Sì</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><icon class="icon-info"></icon>Servizi Candidate Adecco.it</td>
+              <td></td>
+              <td>Sì</td>
+              <td>
+                <label class="switch">
+                  <input type="checkbox" checked>
+                  <span class="slider"></span>
+                </label>
+              </td>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="">
+                  <span></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td><icon class="icon-info"></icon>Servizi di Proposta Attiva</td>
+              <td></td>
+              <td>Sì</td>
+              <td>
+                <label class="switch">
+                  <input type="checkbox" checked>
+                  <span class="slider"></span>
+                </label>
+              </td>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="">
+                  <span></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td><icon class="icon-info"></icon>Ready to Start</td>
+              <td></td>
+              <td>Sì</td>
+              <td>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider"></span>
+                </label>
+              </td>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="">
+                  <span></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td><icon class="icon-info"></icon>Skill Licence</td>
+              <td></td>
+              <td>No</td>
+              <td>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider"></span>
+                </label>
+              </td>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="">
+                  <span></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td><icon class="icon-info"></icon>Basket CV</td>
+              <td></td>
+              <td>No</td>
+              <td>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider"></span>
+                </label>
+              </td>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="">
+                  <span></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td><icon class="icon-info"></icon>HireVue</td>
+              <td><input type="text" class="form-control" name="tar-1" value="500 €"></td>
+              <td>No</td>
+              <td>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider"></span>
+                </label>
+              </td>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="" checked>
+                  <span></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td><icon class="icon-info"></icon>Xpert</td>
+              <td><input type="text" class="form-control" name="tar-1" value="1.000 €"></td>
+              <td>No</td>
+              <td>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider"></span>
+                </label>
+              </td>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="" checked>
+                  <span></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td><icon class="icon-info"></icon>Dizionario delle competenze</td>
+              <td></td>
+              <td>Si</td>
+              <td>
+                <label class="switch">
+                  <input type="checkbox" checked>
+                  <span class="slider"></span>
+                </label>
+              </td>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="">
+                  <span></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td><icon class="icon-info"></icon>Candidate Map</td>
+              <td></td>
+              <td>Si</td>
+              <td>
+                <label class="switch">
+                  <input type="checkbox" checked>
+                  <span class="slider"></span>
+                </label>
+              </td>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="">
+                  <span></span>
+                </label>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h6 class="title-w-sep">Servizi Administrative</h6>
+
+        <table class="table-options">
+          <thead>
+            <tr>
+              <th>Servizio</th>
+              <th>TARIFFA</th>
+              <th>Suggerito</th>
+              <th>Incluso</th>
+              <th>Additional</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><icon class="icon-info"></icon>Standard Adecco Amministrativo</td>
+              <td></td>
+              <td></td>
+              <td>Sì</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><icon class="icon-info"></icon>Servizi Amministrativi Online</td>
+              <td></td>
+              <td>Sì</td>
+              <td>
+                <label class="switch">
+                  <input type="checkbox" checked>
+                  <span class="slider"></span>
+                </label>
+              </td>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="">
+                  <span></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td><icon class="icon-info"></icon>Buste paga in aziendae</td>
+              <td></td>
+              <td>No</td>
+              <td>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider"></span>
+                </label>
+              </td>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="">
+                  <span></span>
+                </label>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h6 class="title-w-sep">Servizi Legal</h6>
+
+        <table class="table-options">
+          <thead>
+            <tr>
+              <th>Servizio</th>
+              <th>TARIFFA</th>
+              <th>Suggerito</th>
+              <th>Incluso</th>
+              <th>Additional</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><icon class="icon-info"></icon>Standard Adecco Legal</td>
+              <td></td>
+              <td></td>
+              <td>Sì</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><icon class="icon-info"></icon>Consulenza</td>
+              <td></td>
+              <td>No</td>
+              <td>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider"></span>
+                </label>
+              </td>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="">
+                  <span></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td><icon class="icon-info"></icon>HR Meeting</td>
+              <td></td>
+              <td>No</td>
+              <td>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider"></span>
+                </label>
+              </td>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="">
+                  <span></span>
+                </label>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h6 class="title-w-sep">Training</h6>
+
+        <table class="table-options">
+          <thead>
+            <tr>
+              <th>Servizio</th>
+              <th>TARIFFA</th>
+              <th>Suggerito</th>
+              <th>Incluso</th>
+              <th>Additional</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><icon class="icon-info"></icon>Formazione On the Job (FOJ)</td>
+              <td></td>
+              <td>No</td>
+              <td>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider"></span>
+                </label>
+              </td>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="">
+                  <span></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td><icon class="icon-info"></icon>Formazione Professionale</td>
+              <td></td>
+              <td>No</td>
+              <td>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider"></span>
+                </label>
+              </td>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="" checked>
+                  <span></span>
+                </label>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h6 class="title-w-sep">Welfare</h6>
+
+        <table class="table-options">
+          <thead>
+            <tr>
+              <th>Servizio</th>
+              <th>TARIFFA</th>
+              <th>Suggerito</th>
+              <th>Incluso</th>
+              <th>Additional</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><icon class="icon-info"></icon>Politiche attive del lavoro</td>
+              <td></td>
+              <td>No</td>
+              <td>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider"></span>
+                </label>
+              </td>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="">
+                  <span></span>
+                </label>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h6 class="title-w-sep">Altri servizi</h6>
+
+        <div class="form-row center-text">
+          <a href="" class="btn btn-default">Aggiungi</a>
+        </div>
+
+        <hgroup>
+          <h2 class="title-w-sep ">Economics UX/UI Designer</h2>
+          <p>Seleziona le quotazioni da includere nel documento</p>
+        </hgroup>
+
+        <table class="table-quoteslist">
+          <thead>
+            <tr>
+              <th>Data creazione <span class="icon-order"></span></th>
+              <th>Scopo</th>
+              <th>Livello</th>
+              <th>Tariffa</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>12/02/2019</td>
+              <td>Sostitutivo</td>
+              <td>5° Livello</td>
+              <td>35.000 €</td>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="" checked>
+                  <span></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>27/01/2019</td>
+              <td>Continuativo</td>
+              <td>4° Livello</td>
+              <td>32.000 €</td>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="" checked>
+                  <span></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>27/01/2019</td>
+              <td>Continuativo</td>
+              <td>4° Livello</td>
+              <td>32.000 €</td>
+              <td>
+                <a href="" class="rowedit"></a>
+                <label class="checkbox">
+                  <input type="checkbox" name="">
+                  <span></span>
+                </label>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <hgroup>
+          <h2 class="title-w-sep ">Appendice</h2>
+          <p>Seleziona quali documenti aggiungere come appendice del documento d’offerta</p>
+        </hgroup>
+
+        <table class="table-appendix">
+          <thead>
+            <tr>
+              <th>Documento</th>
+              <th>Includi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><icon class="icon-info"></icon>Servizi Candidate Adecco.it</td>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="" checked>
+                  <span></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td><icon class="icon-info"></icon>Servizio di Proposta Attiva</td>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="" checked>
+                  <span></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td><icon class="icon-info"></icon>Ready to Start</td>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="" checked>
+                  <span></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td><icon class="icon-info"></icon>Dizionario delle competenze</td>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="">
+                  <span></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td><icon class="icon-info"></icon>Candidate Map</td>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="">
+                  <span></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td><icon class="icon-info"></icon>Servizi Amministrativi Online</td>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="">
+                  <span></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td><icon class="icon-info"></icon>Web Time Capture</td>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="">
+                  <span></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td><icon class="icon-info"></icon>Firma elettronica Avanzata (FEA)</td>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="">
+                  <span></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td><icon class="icon-info"></icon>Modulo rischi on line</td>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="">
+                  <span></span>
+                </label>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
       </section>
+
+      <nav class="bottom-nav">
+        <ul>
+          <li>
+            <a href="#">
+              <div class="icon-text">
+                <span class="the-arrow -left">
+                  <span class="shaft"></span>
+                </span>
+                <strong>Indietro</strong>
+              </div>
+              <span class="link-title">Torna a Inizio Economics</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="icon-text">
+                <strong>Concludi</strong>
+                <span class="the-arrow -right">
+                  <span class="shaft"></span>
+                </span>
+              </div>
+              <span class="link-title">Genera documento PDF</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
 
     </main>
 
