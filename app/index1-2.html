@@ -8,7 +8,11 @@
     <title>ADECCO</title>
     <!-- Place favicon.ico in the root directory -->
 
-    <link rel="stylesheet" href="styles/bootstrap.min.css">
+
+    <!-- build:css styles/vendor.css -->
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/bootstrap-datetimepicker.css">
+    <!-- endbuild -->
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
@@ -74,7 +78,9 @@
     <hr class="border bottom">
     <!-- build:js scripts/vendor.js -->
     <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
-    <!-- <script type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+    <script type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap-datepicker.it.min.js"></script>
     <!-- endbuild -->
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>

@@ -9,14 +9,17 @@ p {
   font-family: $font-family-serif;
 }
 
-h1,
-h2,
-h3 {
-  font-family: $font-family-serif-2;
+h1 {
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.600em;
 }
 
 h3 {
   font-size: 1.400em;
+  font-family: $font-family-serif-2;
 }
 
 h6 {
@@ -101,9 +104,15 @@ h6 {
     border-width: 8px;
 }
 
-.icon {
+.rowedit,
+.rowdelete,
+.rowsave,
+.rowrevert,
+.icon-repeat,
+.icon-info {
   display: inline-block;
   cursor: pointer;
+  vertical-align: middle;
 
   &:after {
     content: "";
@@ -113,14 +122,6 @@ h6 {
     background: center no-repeat;
     background-size: contain;
   }
-}
-
-.rowedit,
-.rowdelete,
-.rowsave,
-.rowrevert,
-.icon-repeat {
-  @extend .icon;
 }
 
 .rowedit:after {
@@ -143,3 +144,17 @@ h6 {
   background-image:  url(../img/repeat.svg);
 }
 
+.icon-info {
+  margin-right: 15px;
+  vertical-align: text-top;
+
+  &:after {
+    width: 20px;
+    height: 20px;
+    background-image:  url(../img/info.svg);
+  }
+}
+
+.center-text {
+  text-align: center !important;
+}

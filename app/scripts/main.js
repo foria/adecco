@@ -20,4 +20,19 @@ $(document).ready(function(){
         $(this).parents('.form-group').removeClass('onfocus');
     });
 
+    $('.switch input').on('change', function(){
+        $(this).parents('td').next().find('.checkbox input').prop('checked', false);
+        $(this).parents('td').next().find('.checkbox').toggleClass('hidden');
+    })
+
+    $('.switch').each(function(){
+        if($(this).find('input').attr('checked') == 'checked'){
+            $(this).parents('td').next().find('.checkbox').toggleClass('hidden');
+        }
+    })
+
+    $('.datepicker').datepicker({
+        language: 'it'
+    });
+
 })

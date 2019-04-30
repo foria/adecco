@@ -189,3 +189,87 @@ fieldset[disabled] .form-control {
     visibility: visible !important;
   }
 }
+
+.switch,
+.checkbox {
+  position: relative;
+  display: inline-block;
+  opacity: 1;
+  vertical-align: middle;
+  margin: 0;
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+
+  &.hidden {
+    display: none;
+  }
+
+  span:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background: url(../img/unselected.svg) center no-repeat;
+    background-size: contain;
+    cursor: pointer;
+  }
+
+  input:checked + span:before {
+    background-image: url(../img/selected.svg);
+  }
+}
+
+.switch {
+  width: 52px;
+  height: 32px;
+}
+
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 28px;
+  width: 28px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: $primary;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px $primary;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
